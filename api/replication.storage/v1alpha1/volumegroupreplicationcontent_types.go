@@ -35,7 +35,7 @@ type VolumeGroupReplicationContentSpec struct {
 	// VolumeGroupReplication object MUST be provided for binding to happen.
 	// This field is immutable after creation.
 	// Required.
-	// +kubebuilder:validation:XValidation:rule="has(self.name) && has(self.__namespace__) && has(self.__UID)",message="volumeGroupReplicationRef.name, volumeGroupReplicationRef.namespace and volumeGroupReplicationRef.UID must be set"
+	// +kubebuilder:validation:XValidation:rule="has(self.name) && has(self.__namespace__) && has(self.uid)",message="volumeGroupReplicationRef.name, volumeGroupReplicationRef.namespace and volumeGroupReplicationRef.UID must be set"
 	// +kubebuilder:validation:XValidation:rule="self == oldSelf",message="volumeGroupReplicationRef is immutable"
 	VolumeGroupReplicationRef *corev1.ObjectReference `json:"volumeGroupReplicationRef"`
 

@@ -130,7 +130,7 @@ spec:
                 x-kubernetes-validations:
                 - message: volumeGroupReplicationRef.name, volumeGroupReplicationRef.namespace
                     and volumeGroupReplicationRef.UID must be set
-                  rule: has(self.name) && has(self.__namespace__) && has(self.__UID)
+                  rule: has(self.name) && has(self.__namespace__) && has(self.uid)
                 - message: volumeGroupReplicationRef is immutable
                   rule: self == oldSelf
             required:
